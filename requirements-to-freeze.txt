@@ -1,3 +1,7 @@
+# Requirements to freeze in order to avoid bad surprises with future
+# incompatible versions.
+# See https://www.kennethreitz.org/essays/a-better-pip-workflow
+
 django
 gunicorn
 # We only need static files for admin, so we can serve it directrly from Django
