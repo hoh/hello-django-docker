@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Hello App</title>
+  </head>
+  <body>
+    <div>
+      <h2>Links to hello pages</h2>
+      <ul>
+        {% for obj in objects %}
+        <li>
+            <a href='{% url 'say_hello' obj.id %}'>{{ obj.name }}</a>
+        </li>
+        {% endfor %}
+      </li>
+    </div>
+    <div>
+      <a href='/admin/'>Edit objects</a>
+    </div>
+  </body>
+</html>

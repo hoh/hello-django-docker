@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import DatabaseObject
 
-# Register your models here.
+
+class DatabaseObjectAdmin(admin.ModelAdmin):
+    fields = ('name',)
+
+
+admin.site.register(DatabaseObject, DatabaseObjectAdmin)
