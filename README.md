@@ -1,9 +1,16 @@
 # hello-django-docker
 Hello world in Django with Docker
 
+This repository serves as an example to run a simple Django app using Docker.
+It includes the minimum required for such an app, and follows the [KISS principle](https://en.wikipedia.org/wiki/KISS_principle):
+It uses a simple SQLite database, runs Python with a few
+[Gunicorn](http://gunicorn.org/) workers and serves static files without a
+reverse proxy as only the web admin makes use of those.
+
 ## Requirements
 
 You need will need Docker installed and running and an internet connexion.
+The configuration was tested with Docker 1.12.3 on Ubuntu 16.04 LTS.
 
 ## Usage
 
