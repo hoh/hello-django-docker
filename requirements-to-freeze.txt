@@ -1,0 +1,4 @@
+django
+gunicorn
+# We only need static files for admin, so we can serve it directrly from Django
+dj-static
