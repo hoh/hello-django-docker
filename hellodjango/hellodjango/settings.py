@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'v2!4l7oe9y6-ua1qviavd-4_m0r!y_e7%2&dn7_t6$p8z-o@%7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Run with debug mode when not running in a Docker (eg: developer's laptop)
+DEBUG = not os.path.isfile('/.dockerenv')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['some-django-box.dev']
 
 
 # Application definition
