@@ -26,7 +26,7 @@ SECRET_KEY = 'v2!4l7oe9y6-ua1qviavd-4_m0r!y_e7%2&dn7_t6$p8z-o@%7'
 # Run with debug mode when not running in a Docker (eg: developer's laptop)
 DEBUG = not os.path.isfile('/.dockerenv')
 
-ALLOWED_HOSTS = ['some-django-box.dev']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', 'some-django-box.dev']
 
 
 # Application definition
