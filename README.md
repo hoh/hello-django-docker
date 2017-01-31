@@ -14,7 +14,11 @@ The configuration was tested with Docker 1.12.3 on Ubuntu 16.04 LTS.
 
 ## Usage
 
-Clone this repository, then build the Docker image with
+Clone this repository, and customize the setting `ALLOWED_HOSTS` in the file `hellodjango/hellodjango/settings.py` with the domain names you
+will want to use for this web app. Localhost is already included if
+you just want to use that.
+
+Build the Docker image with
 ```
 docker build -t hellodjango .
 ```
@@ -40,3 +44,4 @@ greeting for the first object on [localhost:8000/hello-world/1](http://localhost
 
 Finally, you can configure your local DNS configuration to access this a greeting
 from other devices with an URL like [http://some-django-box.dev/hello-world/&lt;id&gt;](http://some-django-box.dev/hello-world/1).
+If you get _Bad Request (400)_ error pages, check the ALLOWED_HOSTS setting above and rebuild your image.
